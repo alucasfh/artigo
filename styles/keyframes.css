@@ -1,0 +1,31 @@
+@keyframes mark {
+  50% {
+    border-right-color: transparent;
+  }
+}
+
+@keyframes write {
+  20% {
+    color: #000;
+    opacity: 0.2;
+    width: 0;
+  }
+
+  70% {
+    color: #474747;
+    opacity: 0.7;
+    width: 54ch;
+  }
+
+  85% {
+    color: #fff;
+    opacity: 1;
+    width: 54ch;
+  }
+
+  100% {
+    color: #fff;
+    opacity: 1;
+    width: 54ch;
+  }
+}
