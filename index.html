@@ -1,122 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/keyframes.css">
-  <link rel="stylesheet" href="./styles/titles.css">
-  <link rel="stylesheet" href="./styles/imgs.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="shortcut icon" href="src/artificial-intelligence.png" type="image/x-icon">
-  <title>Inteligência Artificial</title>
+  <title>Ofertas Exclusivas para Você!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa-claro: #ffe4ec;
+      --rosa-medio: #f8bbd0;
+      --rosa-escuro: #c2185b;
+      --lilas: #e1bee7;
+      --bege: #fff8f0;
+      --branco: #fff;
+      --roxo: #7c43bd;
+      --vermelho: #e53935;
+      --cinza: #f5f5f5;
+      --sombra: 0 2px 8px rgba(200, 24, 91, 0.08);
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--bege);
+      margin: 0;
+      color: #3a2d3c;
+    }
+    .topo-fixo {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--rosa-claro);
+      box-shadow: var(--sombra);
+      z-index: 1000;
+      padding: 16px 0 8px 0;
+      text-align: center;
+    }
+    .contador {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: var(--rosa-escuro);
+      letter-spacing: 1px;
+    }
+    .frase-brinde {
+      font-size: 1rem;
+      color: var(--roxo);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .espaco-topo { height: 90px; }
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      padding: 32px 8px 16px 8px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .produto {
+      background: var(--branco);
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 16px 16px 16px;
+      position: relative;
+      transition: transform 0.2s;
+    }
+    .produto:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 4px 16px rgba(200,24,91,0.13);
+    }
+    .produto img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      border: 3px solid var(--rosa-medio);
+      background: var(--cinza);
+    }
+    .produto h3 {
+      font-size: 1.15rem;
+      color: var(--rosa-escuro);
+      margin: 0 0 8px 0;
+      font-weight: 700;
+      text-align: center;
+    }
+    .produto p {
+      font-size: 0.98rem;
+      color: #5a3d5c;
+      margin: 0 0 10px 0;
+      text-align: center;
+    }
+    .preco {
+      font-size: 1.1rem;
+      color: var(--roxo);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .btn-comprar {
+      background: linear-gradient(90deg, var(--rosa-escuro), var(--roxo));
+      color: #fff;
+      border: none;
+      border-radius: 24px;
+      padding: 12px 32px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 8px;
+      box-shadow: 0 2px 8px rgba(124,67,189,0.08);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-comprar:hover {
+      background: linear-gradient(90deg, var(--roxo), var(--rosa-escuro));
+      transform: scale(1.04);
+    }
+    .urgencia {
+      color: var(--vermelho);
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 2px;
+      text-align: center;
+    }
+    .rodape {
+      background: var(--rosa-claro);
+      color: var(--rosa-escuro);
+      text-align: center;
+      padding: 18px 8px 60px 8px;
+      font-size: 1rem;
+      margin-top: 40px;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      box-shadow: 0 -2px 8px rgba(200,24,91,0.06);
+    }
+    .garantia {
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .aviso-afiliado {
+      font-size: 0.93rem;
+      color: #7c43bd;
+      margin-top: 8px;
+    }
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2000;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.18);
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .whatsapp-float:hover {
+      background: #128c7e;
+      transform: scale(1.08);
+    }
+    @media (max-width: 900px) {
+      .produtos { gap: 18px; }
+      .produto { width: 95vw; max-width: 340px; }
+    }
+    @media (max-width: 600px) {
+      .espaco-topo { height: 120px; }
+      .produtos { flex-direction: column; align-items: center; gap: 18px; }
+      .produto { width: 98vw; max-width: 370px; }
+    }
+  </style>
 </head>
-
 <body>
-  <div class="main-container">
-    <div class="container ">
-      <div class="title-main">
-        <h1> A Inteligência Artificial
-        </h1>
-      </div>
-      <article>
-        <h2 class="sub-title"> O Que é a Inteligência Artificial ?</h2>
-        <img src="./src/images/mao-robo.jpg" class="img content"
-          alt="inteligência artificial com códigos de progrmação">
-        <p class="paragraph content">
-          A inteligência artificial é um campo de estudo multidisciplinar que abrange varias áreas do conhecimento. É
-          também um conjunto de novas tecnologias que permitem aos aparelhos smart executarem várias funções avançadas
-          de modo quase autônomo, representanto um marco histórico na computação moderna.
-          O conceito de IA foi formalmente introduzido em 1956, durante uma conferência no Dartmouth College, nos EUA,
-          pelo cientista da computação John McCarthy. Este marco nomeou um campo emergente que, desde os anos 1940,
-          aspirava a replicar matematicamente as funções dos neurônios cerebrais.</p>
-        <p class="paragraph content">A Inteligência Artificial busca fazer com que as máquinas executem tarefas
-          complexas,
-          simulando a
-          inteligência humana e tomando decisões de forma autônoma. Para que isso seja possível, em muitos casos, há uma
-          combinação de várias tecnologias, como machine learning, reconhecimento de voz e deep learning.</p>
-
-
-        <h2 class="sub-title"> Como Funciona a Inteligência Artificial ?</h2>
-        <img src="./src/images/mao-cerebro.jpg" class="img content" alt="">
-
-        <p class="paragraph content">
-          O funcionamento da Inteligência Artificial se baseia na combinação de grandes volumes de dados digitais e
-          algoritmos inteligentes. Respectivamente, eles permitem ao sistema ler e interpretar padrões e informações
-          para aprender automaticamente.
-          É importante destacar que, para que esse aprendizado aconteça, o sistema de Inteligência Artificial precisa
-          ser constantemente alimentado com novos dados.
-          Assim, o funcionamento da IA baseia-se em:
-          Modelo de dados: estruturas utilizadas para processar, categorizar e analisar dados;
-          Big Data: disponibilização de grandes volumes de dados;
-          Poder de processamento: trata-se da capacidade operacional do sistema em processar as informações.
-          Para que todo esse processo aconteça, no entanto, é necessário combinar diferentes tecnologias que, juntas,
-          conferem à máquina a capacidade de imitar o raciocínio lógico humano.
-        </p>
-
-        <h2 class="sub-title"> Avanço da IA (Inteligência Artificial)</h2>
-
-        <p class="paragraph content">O uso da tecnologia e, consequentemente, da Inteligência Artificial (IA), é cada
-          vez maior
-          em todas as áreas
-          do conhecimento, nas mais simples atividades do dia a dia de qualquer ser humano e em qualquer parte do mundo,
-          sem nem mesmo que as pessoas percebam sua presença.
-
-          É possível resumir a Inteligência Artificial a um campo das ciências da computação em que máquinas ou
-          algoritmos realizam tarefas. Assim, é usada em buscas na internet, compras no comércio eletrônico, serviços
-          bancários virtuais, aplicativos e smartphones, entre diversos outros produtos e serviços.
-
-          Mas, assim como a Inteligência Artificial pode trazer inúmeras vantagens, como praticidade, velocidade e
-          qualidade dos serviços, também esbarra em questões éticas, morais e sociais e pode oferecer riscos, caso seja
-          usada irresponsavelmente ou para fins negativos.</p>
-
-        <h2 class="sub-title"> IA ao Seu Favor !</h2>
-        <img src="./src/images/mao-robo-humano.jpg" class="img content" alt="">
-        <p class="paragraph content">Uma das formas mais impactantes de utilizar a inteligência artificial nos negócios
-          é por
-          meio da
-          automatização de processos. Tarefas repetitivas e demoradas podem ser facilmente delegadas a sistemas de IA,
-          liberando os colaboradores para atividades mais estratégicas e criativas. Isso resulta em maior eficiência,
-          redução de erros e aumento da produtividade.</p>
-        <p class="paragraph content">A IA também possui a capacidade única de analisar e processar grandes volumes de
-          dados em
-          tempo real. Isso
-          possibilita que as empresas obtenham insights valiosos sobre padrões de consumo, preferências dos clientes e
-          tendências de mercado. Com base nesses insights, as estratégias de marketing, vendas e desenvolvimento de
-          produtos podem ser ajustadas de forma a atender às demandas em constante mudanças.</p>
-        <p class="paragraph content">A implementação de chatbots e assistentes virtuais impulsionados por IA está
-          transformando
-          a experiência do
-          cliente. Esses sistemas podem oferecer suporte 24/7, responder a perguntas frequentes e até mesmo resolver
-          problemas simples, proporcionando um atendimento mais rápido e eficaz. Isso resulta em maior satisfação do
-          cliente e fortalecimento da relação com a marca.</p>
-      </article>
-    </div>
+  <div class="topo-fixo">
+    <span class="contador" id="contador">14:00</span>
+    <div class="frase-brinde">Compre em até 14 minutos e ganhe um brinde exclusivo direto no WhatsApp!</div>
   </div>
-
-  <div class="main-container-2">
-    <div class="container-2">
-      <div class="src">
-        <img src="./src/images/warren.jpg" class="img-container-2 content" alt="Warren McCulloch">
+  <div class="espaco-topo"></div>
+  <main>
+    <section class="produtos">
+      <!-- PRODUTOS INÍCIO -->
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Removedor de Manchas">
+        <h3>Removedor de Manchas</h3>
+        <p>Elimine manchas difíceis de roupas e superfícies em segundos. Prático, portátil e seguro para tecidos delicados.</p>
+        <div class="preco">R$ 79,90</div>
+        <a href="https://afiliado.com/removedor" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
       </div>
-      <p class="paragraph  p">
-        Warren McCulloch e Walter Pitts criaram um modelo computacional para redes neurais baseadas em matemática e
-        algoritmos denominados lógica de limiar (threshold logic). Este modelo abriu o caminho para a pesquisa da rede
-        neural dividida em duas abordagens: uma abordagem focada em processos biológicos no cérebro, enquanto a outra
-        focada na aplicação de redes neurais à inteligência artificial.
-
-        Eles criam a primeira ideia de neurônio artificial, no artigo “A logical calculus of the ideas immanent in
-        nervous activity”, 1943.
-      </p>
-    </div>
-  </div>
-
-
-
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Depilador Portátil">
+        <h3>Depilador Portátil</h3>
+        <p>Pele lisinha em minutos, sem dor e sem irritação. Ideal para levar na bolsa e usar onde quiser!</p>
+        <div class="preco">R$ 119,90</div>
+        <a href="https://afiliado.com/depilador" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Kit Autocuidado Spa">
+        <h3>Kit Autocuidado Spa</h3>
+        <p>Transforme seu banho em um momento de relaxamento com essências, óleos e acessórios exclusivos.</p>
+        <div class="preco">R$ 89,90</div>
+        <a href="https://afiliado.com/spa" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Escova Alisadora">
+        <h3>Escova Alisadora</h3>
+        <p>Cabelos lisos e brilhantes em minutos, sem danificar os fios. Praticidade e beleza todos os dias!</p>
+        <div class="preco">R$ 149,90</div>
+        <a href="https://afiliado.com/escova" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Massageador Facial">
+        <h3>Massageador Facial</h3>
+        <p>Reduza linhas de expressão e melhore a circulação com massagens relaxantes e revigorantes.</p>
+        <div class="preco">R$ 59,90</div>
+        <a href="https://afiliado.com/massageador" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80" alt="Organizador de Maquiagem">
+        <h3>Organizador de Maquiagem</h3>
+        <p>Deixe sua penteadeira linda e prática. Organize batons, pincéis e acessórios com muito charme!</p>
+        <div class="preco">R$ 49,90</div>
+        <a href="https://afiliado.com/organizador" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Espelho de Bolsa com LED">
+        <h3>Espelho de Bolsa com LED</h3>
+        <p>Perfeito para retoques rápidos em qualquer lugar. Iluminação suave e design compacto!</p>
+        <div class="preco">R$ 39,90</div>
+        <a href="https://afiliado.com/espelho" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Mini Umidificador de Ar">
+        <h3>Mini Umidificador de Ar</h3>
+        <p>Melhore a qualidade do ar e cuide da sua pele. Portátil, silencioso e super charmoso!</p>
+        <div class="preco">R$ 69,90</div>
+        <a href="https://afiliado.com/umidificador" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Cinta Modeladora">
+        <h3>Cinta Modeladora</h3>
+        <p>Realce sua silhueta com conforto e discrição. Ideal para usar no dia a dia ou em ocasiões especiais.</p>
+        <div class="preco">R$ 99,90</div>
+        <a href="https://afiliado.com/cinta" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <div class="produto">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Planner Digital Feminino">
+        <h3>Planner Digital Feminino</h3>
+        <p>Organize sua rotina com estilo! Layouts lindos, práticos e prontos para imprimir ou usar no tablet.</p>
+        <div class="preco">R$ 29,90</div>
+        <a href="https://afiliado.com/planner" class="btn-comprar" target="_blank">Comprar Agora</a>
+        <div class="urgencia">Restam poucas unidades com brinde grátis!</div>
+      </div>
+      <!-- PRODUTOS FIM -->
+    </section>
+  </main>
+  <footer class="rodape">
+    <span class="garantia">Compra 100% segura • Satisfação garantida ou seu dinheiro de volta</span>
+    <span class="aviso-afiliado">Essa página pode conter links de afiliado.</span>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/5599999999999" target="_blank" title="Fale conosco no WhatsApp">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="16" fill="#25D366"/>
+      <path d="M22.5 18.5c-.3-.2-1.8-.9-2.1-1-..." fill="#fff"/>
+    </svg>
+  </a>
+  <script>
+    // Contador regressivo de 14 minutos
+    function startCountdown(duration, display) {
+      let timer = duration, minutes, seconds;
+      setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) timer = duration;
+      }, 1000);
+    }
+    window.onload = function () {
+      const duration = 60 * 14; // 14 minutos
+      const display = document.getElementById('contador');
+      startCountdown(duration, display);
+    };
+  </script>
 </body>
-<script src="./scripts/script.js"></script>
-
 </html>
