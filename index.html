@@ -1,122 +1,242 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/keyframes.css">
-  <link rel="stylesheet" href="./styles/titles.css">
-  <link rel="stylesheet" href="./styles/imgs.css">
-  <link rel="stylesheet" href="./styles/style.css">
-  <link rel="shortcut icon" href="src/artificial-intelligence.png" type="image/x-icon">
-  <title>Inteligência Artificial</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza & Cuidados - Produtos Exclusivos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <div class="main-container">
-    <div class="container ">
-      <div class="title-main">
-        <h1> A Inteligência Artificial
-        </h1>
-      </div>
-      <article>
-        <h2 class="sub-title"> O Que é a Inteligência Artificial ?</h2>
-        <img src="./src/images/mao-robo.jpg" class="img content"
-          alt="inteligência artificial com códigos de progrmação">
-        <p class="paragraph content">
-          A inteligência artificial é um campo de estudo multidisciplinar que abrange varias áreas do conhecimento. É
-          também um conjunto de novas tecnologias que permitem aos aparelhos smart executarem várias funções avançadas
-          de modo quase autônomo, representanto um marco histórico na computação moderna.
-          O conceito de IA foi formalmente introduzido em 1956, durante uma conferência no Dartmouth College, nos EUA,
-          pelo cientista da computação John McCarthy. Este marco nomeou um campo emergente que, desde os anos 1940,
-          aspirava a replicar matematicamente as funções dos neurônios cerebrais.</p>
-        <p class="paragraph content">A Inteligência Artificial busca fazer com que as máquinas executem tarefas
-          complexas,
-          simulando a
-          inteligência humana e tomando decisões de forma autônoma. Para que isso seja possível, em muitos casos, há uma
-          combinação de várias tecnologias, como machine learning, reconhecimento de voz e deep learning.</p>
+    <!-- Header Fixo com Contador -->
+    <header class="fixed-header">
+        <div class="container">
+            <div class="countdown-section">
+                <h2>🎁 OFERTA ESPECIAL POR TEMPO LIMITADO</h2>
+                <div class="countdown-timer">
+                    <div class="time-unit">
+                        <span id="minutes">14</span>
+                        <label>min</label>
+                    </div>
+                    <div class="time-unit">
+                        <span id="seconds">00</span>
+                        <label>seg</label>
+                    </div>
+                </div>
+                <p class="countdown-text">Compre em até 14 minutos e ganhe um brinde exclusivo direto no WhatsApp!</p>
+            </div>
+        </div>
+    </header>
 
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h1>✨ Produtos de Beleza & Autocuidado ✨</h1>
+                <p>Descubra os segredos para realçar sua beleza natural com produtos selecionados especialmente para você</p>
+            </section>
 
-        <h2 class="sub-title"> Como Funciona a Inteligência Artificial ?</h2>
-        <img src="./src/images/mao-cerebro.jpg" class="img content" alt="">
+            <!-- Products Section -->
+            <section class="products-section">
+                <h2>💖 Produtos em Destaque</h2>
+                <div class="products-grid">
+                    
+                    <!-- Produto 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=300&h=300&fit=crop&crop=center" alt="Removedor de Manchas Premium">
+                        </div>
+                        <div class="product-info">
+                            <h3>Removedor de Manchas Premium</h3>
+                            <p>Remove manchas difíceis em segundos! Fórmula avançada que não danifica os tecidos e deixa suas roupas como novas.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 89,90</span>
+                                <span class="current-price">R$ 49,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-        <p class="paragraph content">
-          O funcionamento da Inteligência Artificial se baseia na combinação de grandes volumes de dados digitais e
-          algoritmos inteligentes. Respectivamente, eles permitem ao sistema ler e interpretar padrões e informações
-          para aprender automaticamente.
-          É importante destacar que, para que esse aprendizado aconteça, o sistema de Inteligência Artificial precisa
-          ser constantemente alimentado com novos dados.
-          Assim, o funcionamento da IA baseia-se em:
-          Modelo de dados: estruturas utilizadas para processar, categorizar e analisar dados;
-          Big Data: disponibilização de grandes volumes de dados;
-          Poder de processamento: trata-se da capacidade operacional do sistema em processar as informações.
-          Para que todo esse processo aconteça, no entanto, é necessário combinar diferentes tecnologias que, juntas,
-          conferem à máquina a capacidade de imitar o raciocínio lógico humano.
-        </p>
+                    <!-- Produto 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=300&h=300&fit=crop&crop=center" alt="Depilador Portátil">
+                        </div>
+                        <div class="product-info">
+                            <h3>Depilador Portátil Ultra Suave</h3>
+                            <p>Depilação indolor e eficaz em casa! Tecnologia de luz pulsada para resultados duradouros e pele sedosa.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 299,90</span>
+                                <span class="current-price">R$ 149,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-        <h2 class="sub-title"> Avanço da IA (Inteligência Artificial)</h2>
+                    <!-- Produto 3 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=300&h=300&fit=crop&crop=center" alt="Kit Skincare Completo">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kit Skincare Completo</h3>
+                            <p>Rotina completa para uma pele radiante! Inclui sérum vitamina C, hidratante e protetor solar. Resultados em 7 dias!</p>
+                            <div class="price">
+                                <span class="old-price">R$ 199,90</span>
+                                <span class="current-price">R$ 99,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-        <p class="paragraph content">O uso da tecnologia e, consequentemente, da Inteligência Artificial (IA), é cada
-          vez maior
-          em todas as áreas
-          do conhecimento, nas mais simples atividades do dia a dia de qualquer ser humano e em qualquer parte do mundo,
-          sem nem mesmo que as pessoas percebam sua presença.
+                    <!-- Produto 4 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=300&h=300&fit=crop&crop=center" alt="Máscara Facial Premium">
+                        </div>
+                        <div class="product-info">
+                            <h3>Máscara Facial Anti-Idade</h3>
+                            <p>Rejuvenesça sua pele instantaneamente! Máscara com colágeno e ácido hialurônico para rugas e linhas de expressão.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 79,90</span>
+                                <span class="current-price">R$ 39,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-          É possível resumir a Inteligência Artificial a um campo das ciências da computação em que máquinas ou
-          algoritmos realizam tarefas. Assim, é usada em buscas na internet, compras no comércio eletrônico, serviços
-          bancários virtuais, aplicativos e smartphones, entre diversos outros produtos e serviços.
+                    <!-- Produto 5 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=300&h=300&fit=crop&crop=center" alt="Escova Alisadora">
+                        </div>
+                        <div class="product-info">
+                            <h3>Escova Alisadora Profissional</h3>
+                            <p>Cabelos lisos e sedosos em minutos! Tecnologia cerâmica que não resseca os fios e mantém o brilho natural.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 159,90</span>
+                                <span class="current-price">R$ 79,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-          Mas, assim como a Inteligência Artificial pode trazer inúmeras vantagens, como praticidade, velocidade e
-          qualidade dos serviços, também esbarra em questões éticas, morais e sociais e pode oferecer riscos, caso seja
-          usada irresponsavelmente ou para fins negativos.</p>
+                    <!-- Produto 6 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=300&fit=crop&crop=center" alt="Óleo Capilar">
+                        </div>
+                        <div class="product-info">
+                            <h3>Óleo Capilar Reparador</h3>
+                            <p>Recupere a saúde dos seus cabelos! Fórmula com argan e coco que hidrata profundamente e controla o frizz.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 69,90</span>
+                                <span class="current-price">R$ 29,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-        <h2 class="sub-title"> IA ao Seu Favor !</h2>
-        <img src="./src/images/mao-robo-humano.jpg" class="img content" alt="">
-        <p class="paragraph content">Uma das formas mais impactantes de utilizar a inteligência artificial nos negócios
-          é por
-          meio da
-          automatização de processos. Tarefas repetitivas e demoradas podem ser facilmente delegadas a sistemas de IA,
-          liberando os colaboradores para atividades mais estratégicas e criativas. Isso resulta em maior eficiência,
-          redução de erros e aumento da produtividade.</p>
-        <p class="paragraph content">A IA também possui a capacidade única de analisar e processar grandes volumes de
-          dados em
-          tempo real. Isso
-          possibilita que as empresas obtenham insights valiosos sobre padrões de consumo, preferências dos clientes e
-          tendências de mercado. Com base nesses insights, as estratégias de marketing, vendas e desenvolvimento de
-          produtos podem ser ajustadas de forma a atender às demandas em constante mudanças.</p>
-        <p class="paragraph content">A implementação de chatbots e assistentes virtuais impulsionados por IA está
-          transformando
-          a experiência do
-          cliente. Esses sistemas podem oferecer suporte 24/7, responder a perguntas frequentes e até mesmo resolver
-          problemas simples, proporcionando um atendimento mais rápido e eficaz. Isso resulta em maior satisfação do
-          cliente e fortalecimento da relação com a marca.</p>
-      </article>
-    </div>
-  </div>
+                    <!-- Produto 7 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300&h=300&fit=crop&crop=center" alt="Cílios Postiços">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kit Cílios Postiços Naturais</h3>
+                            <p>Olhar marcante e natural! Kit com 5 pares de cílios diferentes para cada ocasião, fáceis de aplicar.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 59,90</span>
+                                <span class="current-price">R$ 24,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-  <div class="main-container-2">
-    <div class="container-2">
-      <div class="src">
-        <img src="./src/images/warren.jpg" class="img-container-2 content" alt="Warren McCulloch">
-      </div>
-      <p class="paragraph  p">
-        Warren McCulloch e Walter Pitts criaram um modelo computacional para redes neurais baseadas em matemática e
-        algoritmos denominados lógica de limiar (threshold logic). Este modelo abriu o caminho para a pesquisa da rede
-        neural dividida em duas abordagens: uma abordagem focada em processos biológicos no cérebro, enquanto a outra
-        focada na aplicação de redes neurais à inteligência artificial.
+                    <!-- Produto 8 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=300&h=300&fit=crop&crop=center" alt="Creme Hidratante">
+                        </div>
+                        <div class="product-info">
+                            <h3>Creme Hidratante Corporal Luxo</h3>
+                            <p>Pele macia por 24h! Fórmula com manteiga de karité e vitamina E que nutre profundamente sem deixar oleosa.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 89,90</span>
+                                <span class="current-price">R$ 44,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
-        Eles criam a primeira ideia de neurônio artificial, no artigo “A logical calculus of the ideas immanent in
-        nervous activity”, 1943.
-      </p>
-    </div>
-  </div>
+                    <!-- Produto 9 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=300&h=300&fit=crop&crop=center" alt="Massageador Facial">
+                        </div>
+                        <div class="product-info">
+                            <h3>Massageador Facial Gua Sha</h3>
+                            <p>Lifting natural em casa! Pedra de quartzo rosa que estimula a circulação, reduz inchaço e define o contorno facial.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 49,90</span>
+                                <span class="current-price">R$ 19,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
+                    <!-- Produto 10 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=300&h=300&fit=crop&crop=center" alt="Kit Unhas">
+                        </div>
+                        <div class="product-info">
+                            <h3>Kit Manicure Profissional</h3>
+                            <p>Unhas perfeitas em casa! Kit completo com alicate, lixa elétrica e esmaltes de longa duração para um resultado de salão.</p>
+                            <div class="price">
+                                <span class="old-price">R$ 129,90</span>
+                                <span class="current-price">R$ 69,90</span>
+                            </div>
+                            <button class="buy-btn" onclick="window.open('#', '_blank')">Comprar Agora</button>
+                            <p class="urgency">⚡ Restam poucas unidades com brinde grátis!</p>
+                        </div>
+                    </div>
 
+                </div>
+            </section>
+        </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="guarantee">
+                <h3>🛡️ Compra 100% Segura</h3>
+                <p>Satisfação garantida ou seu dinheiro de volta</p>
+            </div>
+            <div class="affiliate-notice">
+                <p><small>Esta página pode conter links de afiliado.</small></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.886 3.75"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
 </body>
-<script src="./scripts/script.js"></script>
-
 </html>
